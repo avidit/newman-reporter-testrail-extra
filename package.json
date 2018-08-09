@@ -1,0 +1,23 @@
+{
+  "name": "newman-reporter-testrail",
+  "version": "1.0.0",
+  "description": "A newman reporter for TestRail",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avidit/newman-reporter-testrail.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "newman",
+    "postman",
+    "testrail"
+  ],
+  "author": "aabishkar@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "testrail-api": "^1.3.4"
+  }
+}
