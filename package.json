@@ -1,5 +1,5 @@
 {
-  "name": "newman-reporter-testrail",
+  "name": "newman-reporter-testrail-extra",
   "version": "1.0.0",
   "description": "A newman reporter for TestRail",
   "main": "index.js",

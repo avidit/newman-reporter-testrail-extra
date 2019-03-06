@@ -18,7 +18,6 @@ let testrail = new Testrail({
     password: password
 });
 
-
 class TestRailReporter {
     constructor(emitter, reporterOptions, options) {
         const results = [];
