@@ -18,20 +18,27 @@ pm.test("C12345 C67890 Status code is 200", function() {
 });
 ```
 
-### Set the environment variables.
+### Set the reporter options.
 
+Reporter option can be set as environment variables or from reporter options arguments
 ```
-TESTRAIL_HOST='https://testrail.domain.com' # TestRail host.
-TESTRAIL_USERNAME='username@domain.com'     # TestRail username.
-TESTRAIL_PASSWORD='testrail_password'       # TestRail password.
-TESTRAIL_API_KEY='testrail_api_key'         # TestRail API key.
-TESTRAIL_PROJECT_ID='testrail_project_id'   # TestRail project id.
-TESTRAIL_SUITE_ID='testrail_suite_id'       # (optional) TestRail suite id. Required for multi-suite projects.
-TESTRAIL_RUN_NAME='Automation run'          # (optional) Name of test run to create.
+export TESTRAIL_HOST='https://testrail.domain.com' # TestRail host.
+export TESTRAIL_USERNAME='username@domain.com'     # TestRail username.
+export TESTRAIL_PASSWORD='testrail_password'       # TestRail password.
+export TESTRAIL_API_KEY='testrail_api_key'         # TestRail API key.
+export TESTRAIL_PROJECT_ID='testrail_project_id'   # TestRail project id.
+export TESTRAIL_SUITE_ID='testrail_suite_id'       # (optional) TestRail suite id. Required for multi-suite projects.
+export TESTRAIL_RUN_NAME='Automation run'          # (optional) Name of test run to create.
 ```
 
 Note: Either [username and password](http://docs.gurock.com/testrail-api2/accessing#username_and_password) or [username and api key](http://docs.gurock.com/testrail-api2/accessing#username_and_api_key) can be used.
 
 ### Run newman test with the reporter option `-r testrail-extra`
 
-    newman run my-collection.postman_collection.json -r cli,testrail-extra
+    newman run my-collection.postman_collection.json -r cli,testrail-extra \
+    --reporter-testrail-extra-host 'https://testrail.domain.com' \
+    --reporter-testrail-extra-username 'username@domain.com' \
+    --reporter-testrail-extra-password 'password' \
+    --reporter-testrail-extra-project-id 'testrail_project_id' \
+    --reporter-testrail-extra-suite-id 'testrail_suite_id' \
+    --reporter-testrail-extra-run-name 'Automation run' 

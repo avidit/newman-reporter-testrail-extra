@@ -1,0 +1,8 @@
+# Testrail info
+export TESTRAIL_HOST='https://testrail.domain.com' # TestRail host.
+export TESTRAIL_USERNAME='username@domain.com'     # TestRail username.
+export TESTRAIL_PASSWORD='testrail_password'       # TestRail password.
+export TESTRAIL_API_KEY='testrail_api_key'         # TestRail API key.
+export TESTRAIL_PROJECT_ID='testrail_project_id'   # TestRail project id.
+export TESTRAIL_SUITE_ID='testrail_suite_id'       # (optional) TestRail suite id. Required for multi-suite projects.
+export TESTRAIL_RUN_NAME='Automation run'          # (optional) Name of test run to create.
